@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block content %}
+{% if  created %}
+   <p>Successfully created a new article</p>
+{% endif%}
+<div style="margin-top: 20px;">
+    <form actiom ="." method= "POST" >
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button style="margin-top: 5px;" type="submit">create article</article></button>
+
+    </form> 
+</div>    
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Hello ! welcome </h1>
+<h3>The list of fruits today </h3>
+{% for x in object %}
+    <li> <a href = 'articles/{{x.id}}/'> {{ x.title }} </a> </li>
+   
+{% endfor %}
+{% endblock %}
