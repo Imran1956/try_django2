@@ -25,13 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-gf-cj0aqdlmn$z1m#87o$s8bk5@h4eu0s#$$ffymnqkx-2o07m')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = str(os.environ.get("DEBUG")) == "1"
+DEBUG = False
+'''str(os.environ.get("DEBUG")) == "1"'''
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['try-django1.herokuapp.com','127.0.0.1:8000']
 
-if  not DEBUG :
+'''if  not DEBUG :
     ALLOWED_HOSTS += [os.environ.get("DJANGO_ALLOWED_HOST")]
-
+'''
 # Application definition
 
 INSTALLED_APPS = [
@@ -116,7 +117,7 @@ if POSTGRES_READY:
             "HOST": POSTGRES_HOST,
             "PORT": POSTGRES_PORT,
         }
-    }
+    } 
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
