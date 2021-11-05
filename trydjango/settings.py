@@ -25,14 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-gf-cj0aqdlmn$z1m#87o$s8bk5@h4eu0s#$$ffymnqkx-2o07m')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-'''str(os.environ.get("DEBUG")) == "1"'''
+DEBUG = str(os.environ.get("DEBUG")) == "1"
 
 ALLOWED_HOSTS = ['try-django1.herokuapp.com','127.0.0.1:8000']
 
-'''if  not DEBUG :
+if  not DEBUG :
     ALLOWED_HOSTS += [os.environ.get("DJANGO_ALLOWED_HOST")]
-'''
+
 # Application definition
 
 INSTALLED_APPS = [
